@@ -32,10 +32,10 @@ class StudentClass {
   }
   firstName: string;
   lastName: string;
-  workOnHomework() {
+  workOnHomework(): string {
     return "Currently working";
   }
-  displayName() {
+  displayName(): string {
     return this.firstName;
   }
 }
