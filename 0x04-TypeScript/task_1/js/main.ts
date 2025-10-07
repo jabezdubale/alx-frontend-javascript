@@ -11,6 +11,31 @@ interface printTeacherFunction {
   (firstName: string, lastName: string): string;
 }
 
-function printTeacher({ firstName, lastName }: { firstName: string; lastName: string }): string {
+function printTeacher({
+  firstName,
+  lastName,
+}: {
+  firstName: string;
+  lastName: string;
+}): string {
   return `${firstName}. ${lastName}`;
+}
+
+interface constructorInterface {
+  firstName: string;
+  lastName: string;
+}
+class StudentClass {
+  constructor(con: constructorInterface) {
+    this.firstName = con.firstName;
+    this.lastName = con.lastName;
+  }
+  firstName: string;
+  lastName: string;
+  workOnHomework() {
+    return "Currently working";
+  }
+  displayName() {
+    return this.firstName;
+  }
 }
